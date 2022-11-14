@@ -1,0 +1,21 @@
+body {
+  font: 25px Arial;
+}
+
+.column {
+  float: left;
+  width: 45%;
+
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+input {
+  width: 400px;
+  height: 150px;
+}

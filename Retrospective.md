@@ -1,7 +1,7 @@
 # Retrospective
 
-- name: Jane Doe
-- email: janedoe@u.boisestate.edu
+- name: Natalie Hahle
+- email: nataliehahle@u.boisestate.edu
 
 ## Instructions
 
