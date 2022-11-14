@@ -1,5 +1,17 @@
 body {
   font: 25px Arial;
+  padding-left: 50px;
+}
+
+h1 {
+  font-size: 70px;
+}
+
+.scrollBox {
+  height:600px;
+  width:650px;
+  border:5px solid black;
+  overflow:auto;
 }
 
 .column {
@@ -18,4 +30,9 @@ body {
 input {
   width: 400px;
   height: 150px;
+}
+
+#dblog {
+  height: 50px;
+  font-size: 25px;
 }
