@@ -33,21 +33,19 @@ block content
         h2 Create Blog:
           h3 Add Post!
           form(action="/add" method="POST") 
-          div  
-            label(for="blog") Add Post
-            //- adds newLine - br
-            br
-            input(name="blog" id="blog" value="apple")
-          
-          div 
-            button Publish Post!
+            div  
+              label(for="blog") Add Post
+              //- adds newLine - br
+              br
+              input(name="blog" id="blog" value="apple")
+            
+            div 
+              button Publish Post!
 
 
   //- ul 
   //-   each txt in data
   //-     ul= txt.blog_id + " - " + txt.blog_txt
-
-
   //- h2 Adding to the List 
   //- form(action="/add" method="POST") 
   //-   div  
@@ -57,19 +55,14 @@ block content
   //-   div 
   //-     button Add grocery item
   
-
   //- h2 Deleting from the List 
   //- form(action="/delete" method="POST") 
   //-   div  
   //-     label(for="blog") Delete item from grocery list:
   //-     input(name="blog" id="blog" value="1")
-
   //-   div 
   //-     button Delete grocery item
-
   //- h2 Clear List - Take caution!
   //- form(action="/clear" method="POST") 
   //-   div 
   //-     button Clear the list? 
-
-  
