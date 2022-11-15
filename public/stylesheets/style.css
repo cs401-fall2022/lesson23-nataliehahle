@@ -4,10 +4,18 @@ body {
 }
 
 h1 {
+  padding-top: 10px;
   font-size: 70px;
+  margin: 0px;
+}
+
+h2 {
+  font-size: 40px;
+  /* text-decoration: underline; */
 }
 
 .scrollBox {
+  padding-left: 18px;
   height:600px;
   width:650px;
   border:5px solid black;
@@ -32,7 +40,59 @@ input {
   height: 150px;
 }
 
-#dblog {
-  height: 50px;
+label {
   font-size: 25px;
+}
+
+#dblog {
+  height: 30px;
+  font-size: 25px;
+  width: 275px;
+}
+
+#eblog {
+  height: 30px;
+  font-size: 25px;
+  width: 275px;
+}
+
+#etblog {
+  width: 400px;
+  height: 130px;
+  font-size: 15px;
+  font-family: Arial;
+}
+
+#tblog {
+  height: 30px;
+  font-size: 25px;
+}
+
+#aublog {
+  height: 30px;
+  font-size: 25px;
+}
+
+#ablog {
+  width: 400px;
+  height: 130px;
+  font-size: 15px;
+  font-family: Arial;
+}
+
+ul {
+  
+  list-style-type: none;
+  padding: 0;
+  border: 6px solid black;
+  width: 600px;
+}
+
+ul li {
+  padding: 50px 18px;
+  border-bottom: 5px solid black;
+}
+
+ul li:last-child {
+  border-bottom: none
 }

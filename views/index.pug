@@ -7,8 +7,8 @@ block content
       h2 Blog Posts:
       div.scrollBox
         ul 
-          for txt in data
-            li= txt.blog_id + " - " + txt.blog_txt
+          each txt in data
+            li= '"' + txt.blog_title + '"'+ " - " + txt.blog_author + "\n"+ "===================================="+ "\n\n" + txt.blog_txt + "\n" + "~" + txt.blog_id + "~"
 
       h2 Clear All Blogs - Take caution!
       form(action="/clear" method="POST") 
@@ -18,33 +18,55 @@ block content
 
     div.column 
       div.delete
-        h2 Delete Blog:
-          h3 Delete Post.
+        h2 Remove Blog
           form(action="/delete" method="POST") 
             div  
-              label(for="blog") Delete Post 
-              //- adds newLine - br
-              br
-              input(name="blog" id="dblog" value="1")
+              label(for="blog") Delete Post: 
+              input(name="dblog" id="dblog" placeholder="Blog ~entry~ to delete...")
 
             div 
               button Remove Post
       
       div.edit
-        h2 Edit Blog:
+        h2 Edit Blog
+            form(action="/edit" method="POST") 
+              div  
+                label(for="blog") Edit Post: 
+                input(name="eblog" id="eblog" placeholder="Blog ~entry~ to edit...")
+                //- adds newLine - br
+                br
+                label(for="blog") Add Text:
+                
+                //- adds newLine - br
+                br
+                textarea(name="etblog" id="etblog" cols="40" rows="5" placeholder="Write update edit...")
+
+              div 
+                button Edit Post
+
+
 
       div.create
-        h2 Create Blog:
-          h3 Add Post!
+        h2 Create Blog
           form(action="/add" method="POST") 
             div  
-              label(for="blog") Add Post
+              label(for="blog") Title: 
+              input(name="tblog" id="tblog" placeholder="Title name...")
+              
               //- adds newLine - br
               br
-              input(name="blog" id="ablog" value="apple")
-            
+
+              label(for="blog") Author: 
+              input(name="aublog" id="aublog" placeholder="Your name...")
+
+              //- adds newLine - br
+              br
+         
+
+              label(for="blog") Add Text:
+              //- adds newLine - br
+              br
+              textarea(name="ablog" id="ablog" cols="40" rows="5" placeholder="Write update...")
+              
             div 
               button Publish Post!
-
-
- 
