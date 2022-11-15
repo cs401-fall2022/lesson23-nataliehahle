@@ -8,7 +8,7 @@ block content
       div.scrollBox
         ul 
           each txt in data
-            li= '"' + txt.blog_title + '"'+ " - " + txt.blog_author + "\n"+ "===================================="+ "\n\n" + txt.blog_txt + "\n" + "~" + txt.blog_id + "~"
+            li= '"' + txt.blog_title + '"'+ " - " + txt.blog_author + "\n"+ "======================================="+ "\n\n" + txt.blog_txt + "\n" + "~" + txt.blog_id + "~"
 
       h2 Clear All Blogs - Take caution!
       form(action="/clear" method="POST") 
