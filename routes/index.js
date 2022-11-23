@@ -104,6 +104,21 @@ router.post('/edit', (req, res, next) => {
   );
 })
 
+router.post('/clear', (req, res, next) => {
+  var db = new sqlite3.Database('mydb.sqlite3',
+    sqlite3.OPEN_READWRITE | sqlite3.OPEN_CREATE,
+    (err) => {
+      if (err) {
+        console.log("Getting error " + err);
+        exit(1);
+      }
+      console.log("Clearing List");
+      db.exec(`DELETE FROM myTable;`);     
+      db.exec(`VACUUM;`);
+      res.redirect('/');
+    }
+  );
+})
 
 
 
