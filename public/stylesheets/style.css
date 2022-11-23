@@ -1,34 +1,32 @@
+
 body {
-  font: 25px Arial;
+  /* background-image: linear-gradient(rgb(27, 141, 255), rgb(9, 163, 206)); */
+  background-color:lightblue;
   padding-left: 50px;
+  font-family: 'URW Chancery L';
 }
 
 h1 {
+  /* text-decoration: 5px underline bisque; */
+  /* color: rgb(34, 86, 241); */
   padding-top: 10px;
-  font-size: 70px;
+  font-size: 0px;
   margin: 0px;
 }
 
 h2 {
+  font-family: 'URW Chancery L', cursive;
+  color: rgb(34, 86, 241);
+  text-decoration: 5px underline dotted rgb(34, 86, 241);
   font-size: 40px;
-  /* text-decoration: underline; */
-}
-
-.scrollBox {
-  padding-left: 18px;
-  height:600px;
-  width:650px;
-  border:5px solid black;
-  overflow:auto;
 }
 
 .column {
   float: left;
-  width: 45%;
-
+  flex: 50%;
+  padding: 10px;
 }
 
-/* Clear floats after the columns */
 .row:after {
   content: "";
   display: table;
@@ -38,6 +36,11 @@ h2 {
 input {
   width: 400px;
   height: 150px;
+  background-color: azure;
+}
+
+textarea {
+  background-color: azure;
 }
 
 label {
@@ -80,19 +83,73 @@ label {
   font-family: Arial;
 }
 
+.scrollBox {
+  background-color: plum;
+  padding-left: 18px;
+  height:600px;
+  width:650px;
+  border:5px solid purple;
+  overflow:auto;
+}
+
+button {
+  font-family: Chalkduster;
+  color: indigo;
+  background-color: lavender;
+  font-size: 16px;
+}
+
+label {
+  color: rgb(65, 112, 252);
+  text-decoration: 5px underline rgb(65, 112, 252);
+}
+
 ul {
-  
   list-style-type: none;
   padding: 0;
-  border: 6px solid black;
+  border: 6px solid purple;
   width: 600px;
 }
 
 ul li {
-  padding: 50px 18px;
-  border-bottom: 5px solid black;
+  color: purple;
+  background-color:lavender;
+  font-family: Chalkduster, fantasy;
+  padding: 60px 20px;
+  border-bottom: 5px solid purple;
 }
 
 ul li:last-child {
   border-bottom: none
 }
+
+@keyframes spin {
+  from { transform: rotate(0deg) }
+  to { transform: rotate(360deg) }
+}
+
+.spin {
+  animation-name: spin;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+img {
+  padding-top: 30px;
+  margin-left: 250px;
+} 
+
+.bounce {
+  position: absolute;
+  -webkit-animation: linear infinite;
+  -webkit-animation-name: run;
+  -webkit-animation-duration: 5s;
+}
+
+@-webkit-keyframes run {
+  0% { left: 0;}
+  50%{ left : 25%;}
+  100%{ left: 0;}
+}
+

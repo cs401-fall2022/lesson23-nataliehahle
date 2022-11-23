@@ -30,3 +30,7 @@ TODO
 ## Sources used
 
 TODO
+rotate
+https://code-boxx.com/rotate-spin-image-html-css/
+bounce
+https://stackoverflow.com/questions/41587802/css-animation-from-left-to-right

@@ -1,34 +1,44 @@
 extends layout
 
 block content
-  h1= title
+  //- Blogging posts
+  h1 = title
   body 
-    div.column 
+    div.column
+   
+      img(src="images/deathstar.png" class="bounce" style='height:50px;') 
       h2 Blog Posts:
+      //- Creates the scroll of blog posts
       div.scrollBox
         ul 
+          //- Adds the text from the database to the homepage
           each txt in data
-            li= '"' + txt.blog_title + '"'+ " - " + txt.blog_author + "\n"+ "======================================="+ "\n\n" + txt.blog_txt + "\n" + "~" + txt.blog_id + "~"
+            li= '"' + txt.blog_title + '"'+ " - " + txt.blog_author + "\n"+ "===================================================="+ "\n\n" + txt.blog_txt + "\n" + "~" + txt.blog_id + "~"
 
+      //- Clear button stuff
       h2 Clear All Blogs - Take caution!
       form(action="/clear" method="POST") 
         div 
           button Clear the blog posts? 
+        div.bot
+          img(src="images/r2d2.webp" class="spin" style='height:300px;')
 
 
     div.column 
       div.delete
         h2 Remove Blog
+          //- Delete posts
           form(action="/delete" method="POST") 
             div  
               label(for="blog") Delete Post: 
               input(name="dblog" id="dblog" placeholder="Blog ~entry~ to delete...")
-
+            
             div 
               button Remove Post
       
       div.edit
         h2 Edit Blog
+            //- Edit the post
             form(action="/edit" method="POST") 
               div  
                 label(for="blog") Edit Post: 
@@ -61,7 +71,6 @@ block content
 
               //- adds newLine - br
               br
-         
 
               label(for="blog") Add Text:
               //- adds newLine - br
