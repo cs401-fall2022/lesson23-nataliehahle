@@ -13,7 +13,7 @@ block content
         ul 
           //- Adds the text from the database to the homepage
           each txt in data
-            li= '"' + txt.blog_title + '"'+ " - " + txt.blog_author + "\n"+ "===================================================="+ "\n\n" + txt.blog_txt + "\n" + "~" + txt.blog_id + "~"
+            li= '"' + txt.blog_title + '"'+ " - " + txt.blog_author + "\n"+ "===================================================="+ "\n\n" + txt.blog_txt + "\n\n" + "~" + txt.blog_id + "~"
 
       //- Clear button stuff
       h2 Clear All Blogs - Take caution!
@@ -53,8 +53,6 @@ block content
 
               div 
                 button Edit Post
-
-
 
       div.create
         h2 Create Blog

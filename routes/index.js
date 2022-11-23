@@ -29,8 +29,8 @@ router.get('/', function (req, res, next) {
                      blog_txt text NOT NULL);
                       
                       insert into myTable (blog_title, blog_author, blog_txt)
-                      values ('Universe', 'Darth Vader', 'Where is Luke!'),
-                             ('Log 66', 'Luke', 'I am in a swamp!');`,
+                      values ('Universe', 'Darth Vader', 'Where is Luke? I can't find him'),
+                             ('Log: 66', 'Luke', 'I am in a swamp and my ship is stuck!');`,
               () => {
                 db.all(` select blog_id, blog_title, blog_author, blog_txt from myTable`, (err, rows) => {
                   res.render('index', { title: 'Blogging', data: rows });
